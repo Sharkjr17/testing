@@ -1,11 +1,6 @@
-if (typeof(Storage) !== "undefined") {
-    // Store
-localStorage.setItem("lastname", "Smith");
-
-// Retrieve
-document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-  } else {
-    document.getElementById("result").innerHTML = "no";
-  }
-document.getElementById("result").innerHTML = "woah";
-
+var string = "This is my compression test.";
+alert("Size of sample is: " + string.length);
+var compressed = LZString.compress(string);
+alert("Size of compressed sample is: " + compressed.length);
+string = LZString.decompress(compressed);
+alert("Sample is: " + string);
